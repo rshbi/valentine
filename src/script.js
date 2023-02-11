@@ -216,56 +216,112 @@ const objectsDistance = 4
 
 const fontLoader = new FontLoader()
 
-fontLoader.load(
-    assets[1].path,
-    (font) =>
-    {
-        const material = new THREE.MeshStandardMaterial({color: 0xffffff})
-        material.roughness = 0.1
+if(sizes.width < 900){
+    fontLoader.load(
+        assets[1].path,
+        (font) =>
+        {
+            const material = new THREE.MeshStandardMaterial({color: 0xffffff})
+            material.roughness = 0.1
+    
+            const textOneGeometry = new TextGeometry(
+                'Happy',
+                {
+                    font: font,
+                    size: 0.5,
+                    height: 0.15,
+                }
+            )
+            textOneGeometry.center()
+    
+            const textOne = new THREE.Mesh(textOneGeometry, material)
+            textOne.position.y = 0.7
+            scene.add(textOne)
+    
+            const textTwoGeometry = new TextGeometry(
+                "Valentine's",
+                {
+                    font: font,
+                    size: 0.5,
+                    height: 0.15,
+                }
+            )
+            textTwoGeometry.center()
+    
+            const textTwo = new THREE.Mesh(textTwoGeometry, material)
+            textTwo.position.y = -0.05
+            scene.add(textTwo)
+    
+            const textThreeGeometry = new TextGeometry(
+                'Day',
+                {
+                    font: font,
+                    size: 0.5,
+                    height: 0.15,
+                }
+            )
+            textThreeGeometry.center()
+    
+            const textThree = new THREE.Mesh(textThreeGeometry, material)
+            textThree.position.y = -0.75
+            scene.add(textThree)
+        }
+    )
+}
+else{
+    fontLoader.load(
+        assets[1].path,
+        (font) =>
+        {
+            const material = new THREE.MeshStandardMaterial({color: 0xffffff})
+            material.roughness = 0.1
+    
+            const textOneGeometry = new TextGeometry(
+                'Happy',
+                {
+                    font: font,
+                    size: 0.5,
+                    height: 0.15,
+                }
+            )
+            textOneGeometry.center()
+    
+            const textOne = new THREE.Mesh(textOneGeometry, material)
+            textOne.position.y = 0.7
+            scene.add(textOne)
+    
+            const textTwoGeometry = new TextGeometry(
+                "Valentine's",
+                {
+                    font: font,
+                    size: 0.5,
+                    height: 0.15,
+                }
+            )
+            textTwoGeometry.center()
+    
+            const textTwo = new THREE.Mesh(textTwoGeometry, material)
+            textTwo.position.y = -0.05
+            scene.add(textTwo)
+    
+            const textThreeGeometry = new TextGeometry(
+                'Day',
+                {
+                    font: font,
+                    size: 0.5,
+                    height: 0.15,
+                }
+            )
+            textThreeGeometry.center()
+    
+            const textThree = new THREE.Mesh(textThreeGeometry, material)
+            textThree.position.y = -0.75
+            scene.add(textThree)
+        }
+    )
+}
 
-        const textOneGeometry = new TextGeometry(
-            'Happy',
-            {
-                font: font,
-                size: 0.5,
-                height: 0.15,
-            }
-        )
-        textOneGeometry.center()
 
-        const textOne = new THREE.Mesh(textOneGeometry, material)
-        textOne.position.y = 0.7
-        scene.add(textOne)
-
-        const textTwoGeometry = new TextGeometry(
-            "Valentine's",
-            {
-                font: font,
-                size: 0.5,
-                height: 0.15,
-            }
-        )
-        textTwoGeometry.center()
-
-        const textTwo = new THREE.Mesh(textTwoGeometry, material)
-        textTwo.position.y = -0.05
-        scene.add(textTwo)
-
-        const textThreeGeometry = new TextGeometry(
-            'Day',
-            {
-                font: font,
-                size: 0.5,
-                height: 0.15,
-            }
-        )
-        textThreeGeometry.center()
-
-        const textThree = new THREE.Mesh(textThreeGeometry, material)
-        textThree.position.y = -0.75
-        scene.add(textThree)
-    }
-)
 
 const directionalLight = new THREE.DirectionalLight(0xffffff, 1)
 directionalLight.position.set(0.2, 0, 1)
