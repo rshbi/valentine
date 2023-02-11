@@ -210,13 +210,13 @@ const sizes = {
     height: window.innerHeight
 }
 
-// console.log(sizes)
+console.log(sizes)
 
 const objectsDistance = 4
 
 const fontLoader = new FontLoader()
 
-if(sizes.width < 900){
+if(sizes.width < 600){
     fontLoader.load(
         assets[1].path,
         (font) =>
@@ -228,21 +228,21 @@ if(sizes.width < 900){
                 'Happy',
                 {
                     font: font,
-                    size: 0.5,
+                    size: 0.18,
                     height: 0.15,
                 }
             )
             textOneGeometry.center()
     
             const textOne = new THREE.Mesh(textOneGeometry, material)
-            textOne.position.y = 0.7
+            textOne.position.y = 0.25
             scene.add(textOne)
     
             const textTwoGeometry = new TextGeometry(
                 "Valentine's",
                 {
                     font: font,
-                    size: 0.5,
+                    size: 0.18,
                     height: 0.15,
                 }
             )
@@ -256,14 +256,14 @@ if(sizes.width < 900){
                 'Day',
                 {
                     font: font,
-                    size: 0.5,
+                    size: 0.18,
                     height: 0.15,
                 }
             )
             textThreeGeometry.center()
     
             const textThree = new THREE.Mesh(textThreeGeometry, material)
-            textThree.position.y = -0.75
+            textThree.position.y = -0.35
             scene.add(textThree)
         }
     )
