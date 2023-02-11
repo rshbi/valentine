@@ -205,6 +205,13 @@ gltfLoader.load(
     }
 )
 
+const sizes = {
+    width: window.innerWidth,
+    height: window.innerHeight
+}
+
+// console.log(sizes)
+
 const objectsDistance = 4
 
 const fontLoader = new FontLoader()
@@ -284,11 +291,6 @@ const particlesMaterial = new THREE.PointsMaterial({
 
 const particles = new THREE.Points(particlesGeometry, particlesMaterial)
 scene.add(particles)
-
-const sizes = {
-    width: window.innerWidth,
-    height: window.innerHeight
-}
 
 window.addEventListener('resize', () =>
 {
