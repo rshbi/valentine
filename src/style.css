@@ -1,0 +1,44 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+html
+{
+    background: #e6a6be;
+}
+
+#letter{
+    background: #e6a6be
+}
+
+.webgl
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    outline: none;
+}
+
+
+.section
+{
+    /* display: flex; */
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    font-family: 'Cabin', sans-serif;
+    color: #ffeded;
+    /* color: #a51099; */
+    /* background-color: bisque; */
+    /* text-transform: uppercase; */
+    font-size: 6vmin;
+    padding-left: 2%;
+    padding-right: 10%;
+}
+
+/* section:nth-child(odd)
+{
+    justify-content: flex-end;
+} */
