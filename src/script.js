@@ -2,6 +2,7 @@ import * as THREE from 'three'
 import { FontLoader } from 'three/examples/jsm/loaders/FontLoader.js'
 import { TextGeometry } from 'three/examples/jsm/geometries/TextGeometry.js'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js'
+import assets from "./assets.js"
 
 const gltfLoader = new GLTFLoader()
 const canvas = document.querySelector('canvas.webgl')
@@ -55,7 +56,7 @@ let model13
 
 
 gltfLoader.load(
-    '/petal.glb',
+    assets[0].path,
     (glb) => {
         model1 = glb.scene.children[0]
 
@@ -209,7 +210,7 @@ const objectsDistance = 4
 const fontLoader = new FontLoader()
 
 fontLoader.load(
-    '/fonts/Sequel_Regular.json',
+    assets[1].path,
     (font) =>
     {
         const material = new THREE.MeshStandardMaterial({color: 0xffffff})
